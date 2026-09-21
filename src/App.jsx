@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
+import { Analytics } from '@vercel/analytics/react';
 import BackgroundEffects from './components/BackgroundEffects';
 import MusicController from './components/MusicController';
 import IntroScene from './components/IntroScene';
@@ -95,6 +96,9 @@ export default function App() {
           )}
         </AnimatePresence>
       </main>
+
+      {/* Vercel Web Analytics */}
+      <Analytics />
     </div>
   );
 }
